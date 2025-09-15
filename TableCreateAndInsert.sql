@@ -71,21 +71,21 @@ INSERT INTO Customers (FirstName, LastName, Email, Phone, AddressID) VALUES
 ('Alice', 'Williams', 'alice@example.com', '111-222-3333', 4);
 
 INSERT INTO Drivers (FirstName, LastName, LicenseNumber) VALUES
-('David', 'Smith', 'DL12345'),   -- ID = 1
-('Emily', 'Johnson', 'DL67890'), -- ID = 2
-('Michael', 'Brown', 'DL54321'), -- ID = 3
-('Olivia', 'Davis', 'DL98765'),  -- ID = 4
-('Jane', 'Robert', 'TLM1289'),   -- ID = 5
-('Mary', 'James', 'AO8526');     -- ID = 6
+('David', 'Smith', 'DL12345'),
+('Emily', 'Johnson', 'DL67890'),
+('Michael', 'Brown', 'DL54321'),
+('Olivia', 'Davis', 'DL98765'),
+('Jane', 'Robert', 'TLM1289'),
+('Mary', 'James', 'AO8526');
 
 
 
 
 -- Each package linked to one Customer and one Driver
 INSERT INTO Packages (Description, Weight, Status, StatusDate, CustomerID, DriverID) VALUES
-('Electronics (fragile)', 5.2, 'pickup',     '2024-01-05 09:15:00', 1, 1),
-('Books',                 2.0, 'delivered',  '2024-01-08 14:30:00', 2, 2),
-('Clothing',              3.5, 'on-transit', '2024-02-02 10:45:00', 3, 3),
-('Furniture',            15.8, 'pickup',     '2024-02-01 11:20:00', 4, 4),
-('Artwork (fragile)',     5.0, 'delivered',  '2024-01-05 13:10:00', 1, 2),
-('Home Appliance',      100.0, 'pickup',     '2024-01-14 08:00:00', 2, 5);
+('Electronics (fragile)', 5.2, 'pickup', '2024-01-05 09:15:00', 1, 1),
+('Books', 2.0, 'delivered', '2024-01-08 14:30:00', 2, 2),
+('Clothing', 3.5, 'on-transit', '2024-02-02 10:45:00', 3, 3),
+('Furniture', 15.8, 'pickup', '2024-02-01 11:20:00', 4, 4),
+('Artwork (fragile)', 5.0, 'delivered', '2024-01-05 13:10:00', 1, 2),
+('Home Appliance', 100.0, 'pickup', '2024-01-14 08:00:00', 2, 5);
