@@ -1,0 +1,7 @@
+SELECT * FROM Packages;
+
+Find on-transit
+
+SELECT * FROM OnTransitCustomers;
+
+View only that customer
