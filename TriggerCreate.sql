@@ -9,7 +9,7 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- Trigger on Packages table
+-- Packages table
 CREATE TRIGGER trg_update_status
 BEFORE UPDATE OF Status ON Packages
 FOR EACH ROW

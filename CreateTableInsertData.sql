@@ -1,5 +1,6 @@
--- 1. Addresses Table
-CREATE TABLE Addresses (
+-- Addresses Table
+CREATE TABLE Addresses 
+(
     AddressID SERIAL PRIMARY KEY,
     StreetAddress VARCHAR(100) NOT NULL,
     City VARCHAR(50) NOT NULL,
@@ -7,8 +8,9 @@ CREATE TABLE Addresses (
     PostalCode VARCHAR(10) NOT NULL
 );
 
--- 2. Customers Table
-CREATE TABLE Customers (
+-- Customers Table
+CREATE TABLE Customers 
+(
     CustomerID SERIAL PRIMARY KEY,
     FirstName VARCHAR(50) NOT NULL,
     LastName VARCHAR(50) NOT NULL,
@@ -17,16 +19,18 @@ CREATE TABLE Customers (
     AddressID INT REFERENCES Addresses(AddressID)
 );
 
--- 3. Drivers Table
-CREATE TABLE Drivers (
+-- Drivers Table
+CREATE TABLE Drivers 
+(
     DriverID SERIAL PRIMARY KEY,
     FirstName VARCHAR(50) NOT NULL,
     LastName VARCHAR(50) NOT NULL,
     LicenseNumber VARCHAR(20) UNIQUE NOT NULL
 );
 
--- 4. Packages Table
-CREATE TABLE Packages (
+-- Packages Table
+CREATE TABLE Packages 
+(
     PackageID SERIAL PRIMARY KEY,
     Description VARCHAR(255),
     Weight DECIMAL(10,2),
@@ -36,9 +40,7 @@ CREATE TABLE Packages (
     DriverID INT REFERENCES Drivers(DriverID)
 );
 
---------------------------------------------------
 -- Insert Data
---------------------------------------------------
 
 -- Addresses
 INSERT INTO Addresses (StreetAddress, City, State, PostalCode) VALUES
@@ -63,7 +65,7 @@ INSERT INTO Drivers (FirstName, LastName, LicenseNumber) VALUES
 ('Jane', 'Robert', 'TLM1289'),
 ('Mary', 'James', 'AO8526');
 
--- Packages (assign CustomerID and DriverID arbitrarily for sample)
+-- Packages (CustomerID and DriverID arbitrary)
 INSERT INTO Packages (Description, Weight, Status, StatusDate, CustomerID, DriverID) VALUES
 ('Electronics (fragile)', 5.2, 'pickup', '2024-01-05 09:15:00', 1, 1),
 ('Books', 2.0, 'delivered', '2024-01-08 14:30:00', 2, 2),

@@ -1,4 +1,4 @@
--- Before update (check current row)
+-- Before update
 SELECT * FROM Packages WHERE PackageID = 1;
 
 -- Update Status to delivered
@@ -6,5 +6,5 @@ UPDATE Packages
 SET Status = 'delivered'
 WHERE PackageID = 1;
 
--- After update (check again, StatusDate should be updated automatically)
+-- After update
 SELECT * FROM Packages WHERE PackageID = 1;
